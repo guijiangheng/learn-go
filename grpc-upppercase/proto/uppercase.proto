@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package uppercase;
+
+option go_package = "github.com/guijiangheng/uppercase/gen";
+
+service UppercaseService {
+  rpc Uppercase (UppercaseRequest) returns (UppercaseResponse);
+}
+
+message UppercaseRequest {
+  string input = 1;
+}
+
+message UppercaseResponse {
+  string output = 1;
+}
